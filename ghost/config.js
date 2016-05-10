@@ -10,28 +10,29 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://115.28.53.207',
+        url: 'http://localhost',
         mail: {},
-        database: {
-            client: 'sqlite3',
-            connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
-            },
-            debug: false
-        },
+        // database: {
+        //     client: 'sqlite3',
+        //     connection: {
+        //         filename: path.join(__dirname, '/content/data/ghost.db')
+        //     },
+        //     debug: false
+        // },
 
         // 配置MySQL 数据库
-        /*database: {
+        database: {
             client: 'mysql',
             connection: {
-                host     : 'host',
-                user     : 'user',
-                password : 'password',
-                database : 'database',
+                host     : 'localhost',
+                port:3307,
+                user     : 'root',
+                password : '645903',
+                database : 'test',
                 charset  : 'utf8'
             },
             debug: false
-        },*/
+        },
 
         server: {
             // Host to be passed to node's `net.Server#listen()`
@@ -62,7 +63,7 @@ config = {
         }*/
 
         // or
-        // 参考文档： http://www.ghostchina.com/upyun-cdn-for-ghost/ 
+        // 参考文档： http://www.ghostchina.com/upyun-cdn-for-ghost/
         /*storage: {
             provider: 'upyun',
             bucketname: 'your-bucket-name',
@@ -73,7 +74,7 @@ config = {
         }*/
 
         // or
-        // 参考文档： http://www.ghostchina.com/aliyun-oss-for-ghost/ 
+        // 参考文档： http://www.ghostchina.com/aliyun-oss-for-ghost/
         /*storage: {
             provider: 'oss',
             bucketname: 'your-bucket-name',
@@ -84,7 +85,7 @@ config = {
         }*/
 
         // or
-        // 参考文档： http://www.ghostchina.com/install-ghost-on-aliyun-ace/ 
+        // 参考文档： http://www.ghostchina.com/install-ghost-on-aliyun-ace/
         /*storage: {
             provider: 'ace-storage',
             bucketname: 'your-bucket-name'
